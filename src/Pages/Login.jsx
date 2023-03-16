@@ -61,7 +61,7 @@ export default class Login extends Component {
         <button
           data-testid="login-submit-button"
           disabled={ disabled }
-          onClick={ () => this.handleSubmit() }
+          onClick={ this.handleSubmit }
         >
           Enviar
         </button>

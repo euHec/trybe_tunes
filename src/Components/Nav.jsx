@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Nav extends Component {
   render() {
     return (
-      <div data-testid="link-to-search">
+      <div>
         <div>
           <Link to="/search" data-testid="link-to-search">Pesquisa</Link>
         </div>
