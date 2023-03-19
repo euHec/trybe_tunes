@@ -52,19 +52,20 @@ export default class Login extends Component {
     return (
       <div data-testid="page-login">
         <span>Login</span>
-        <input
-          data-testid="login-name-input"
-          onChange={ this.handlechanges }
-          placeholder="Qual o seu nome?"
-          type="text"
-        />
-        <button
-          data-testid="login-submit-button"
-          disabled={ disabled }
-          onClick={ this.handleSubmit }
-        >
-          Enviar
-        </button>
+        <form onSubmit={ this.handleSubmit }>
+          <input
+            data-testid="login-name-input"
+            onChange={ this.handlechanges }
+            placeholder="Qual o seu nome?"
+            type="text"
+          />
+          <button
+            data-testid="login-submit-button"
+            disabled={ disabled }
+          >
+            Enviar
+          </button>
+        </form>
       </div>
     );
   }
