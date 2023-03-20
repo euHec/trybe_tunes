@@ -1,0 +1,22 @@
+.page-album {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+.data-album {
+  text-align: center;
+  width: 50%;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player > div:nth-last-child(1) {
+  color:red
+}

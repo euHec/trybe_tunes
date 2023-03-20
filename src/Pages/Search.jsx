@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Header from '../Components/Header';
 // import Loading from '../Components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
-import Album from '../Components/Album';
+import AlbumCard from '../Components/AlbumCard';
 
 export default class Search extends Component {
   state = {
@@ -70,8 +70,8 @@ export default class Search extends Component {
                 {`Resultado de álbuns de: ${artist}`}
               </span>
 
-              { itens.map((item, index) => (
-                <Album key={ index } value={ item } />)) }
+              { itens.map((item) => (
+                <AlbumCard key={ item.collectionId } value={ item } />)) }
             </div>
           ) : (
             <div>

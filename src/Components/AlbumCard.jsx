@@ -2,7 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export default class Album extends Component {
+export default class AlbumCard extends Component {
   render() {
     const { value } = this.props;
     const {
@@ -28,10 +28,12 @@ export default class Album extends Component {
   }
 }
 
-Album.propTypes = {
-  value: PropTypes.string.isRequired,
-  artistName: PropTypes.string.isRequired,
-  collectionName: PropTypes.string.isRequired,
-  collectionPrice: PropTypes.string.isRequired,
-  artworkUrl100: PropTypes.string.isRequired,
+AlbumCard.propTypes = {
+  value: PropTypes.shape({
+    artistName: PropTypes.string,
+    collectionId: PropTypes.number,
+    collectionName: PropTypes.string,
+    collectionPrice: PropTypes.number,
+    artworkUrl100: PropTypes.string,
+  }).isRequired,
 };
