@@ -15,7 +15,3 @@
   flex-direction: row;
   justify-content: space-around;
 }
-
-.player > div :nth-last-child(1) {
-  color:red
-}
