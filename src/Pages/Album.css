@@ -1,9 +1,8 @@
 .page-album {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 20px;
+  flex-flow: row wrap;
   justify-content: space-around;
+  padding: 20px;
 }
 
 .data-album {
@@ -17,6 +16,6 @@
   justify-content: space-around;
 }
 
-.player > div:nth-last-child(1) {
+.player > div :nth-last-child(1) {
   color:red
 }
