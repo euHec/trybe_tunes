@@ -10,18 +10,21 @@ import './Album.css';
 export default class Album extends Component {
   state = {
     loadingMusic: false,
-    data: [],
+    data: {},
     albuns: [],
   };
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getMusicAPI();
+  }
+
+  getMusicAPI = async () => {
     const { match } = this.props;
     const { params } = match;
     const { id } = params;
     const returned = await getMusics(id);
-    const infos = returned.find((r) => r.wrapperType === 'collection');
-    this.setState({ albuns: returned, data: infos });
-  }
+    this.setState({ albuns: returned, data: returned[0] });
+  };
 
   handleChanges = async (param) => {
     this.setState({ loadingMusic: true });
@@ -31,7 +34,7 @@ export default class Album extends Component {
 
   render() {
     const { albuns, data, loadingMusic } = this.state;
-    const { artistName, artworkUrl100, collectionName } = data;
+    console.log(data?.artistName);
     return (
       <div data-testid="page-album">
         <Header />
@@ -39,19 +42,19 @@ export default class Album extends Component {
           <div className="page-album">
             <div className="data-album">
               <div>
-                <img src={ artworkUrl100 } alt={ collectionName } />
+                <img src={ data?.artworkUrl100 } alt={ data?.collectionName } />
               </div>
               <div>
-                <span data-testid="artist-name">{artistName}</span>
+                <span data-testid="artist-name">{data?.artistName}</span>
               </div>
               <div>
-                <span data-testid="album-name">{collectionName}</span>
+                <span data-testid="album-name">{data?.collectionName}</span>
               </div>
             </div>
             <div>
               {albuns.map((album, index) => (index !== 0)
                     && <MusicCard
-                      key={ index }
+                      key={ album.trackId }
                       func={ () => this.handleChanges(album) }
                       value={ album }
                     />)}
