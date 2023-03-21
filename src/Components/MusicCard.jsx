@@ -1,11 +1,28 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { addSong } from '../services/favoriteSongsAPI';
+import Loading from './Loading';
 
 export default class MusicCard extends Component {
+  state = {
+    inputChecked: false,
+    loadingMusic: false,
+  };
+
+  handleChanges = async ({ target }) => {
+    const { checked, name } = target;
+    const { value } = this.props;
+    this.setState(() => ({ loadingMusic: true, [name]: checked }));
+    await addSong(value);
+    this.setState({ loadingMusic: false });
+  };
+
   render() {
-    const { value, func } = this.props;
+    const { value } = this.props;
+    const { inputChecked, loadingMusic } = this.state;
+    if (loadingMusic) { return (<Loading />); }
     return (
-      <div className="player" onChange={ func }>
+      <div className="player">
         <div>
           <span>{ value?.trackName }</span>
         </div>
@@ -17,9 +34,18 @@ export default class MusicCard extends Component {
           </audio>
         </div>
         <div>
-          <label data-testid={ `checkbox-music-${value?.trackId}` }>
+          <label
+            htmlFor={ value?.trackId }
+            data-testid={ `checkbox-music-${value?.trackId}` }
+          >
             Favorita
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              name="inputChecked"
+              id={ value?.trackId }
+              checked={ inputChecked }
+              onChange={ this.handleChanges }
+            />
           </label>
         </div>
       </div>
@@ -28,7 +54,6 @@ export default class MusicCard extends Component {
 }
 
 MusicCard.propTypes = {
-  func: PropTypes.func.isRequired,
   value: PropTypes.shape({
     previewUrl: PropTypes.string,
     trackId: PropTypes.number,
