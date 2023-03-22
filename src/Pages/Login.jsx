@@ -19,7 +19,6 @@ export default class Login extends Component {
     const { target } = event;
     const { value } = target;
 
-    console.log(value);
     const MIN_LENGTH = 3;
     if (target.value.length >= MIN_LENGTH) {
       this.setState({

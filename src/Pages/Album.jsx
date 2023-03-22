@@ -4,28 +4,17 @@ import getMusics from '../services/musicsAPI';
 import Header from '../Components/Header';
 import MusicCard from '../Components/MusicCard';
 import './Album.css';
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+// import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 export default class Album extends Component {
   state = {
     data: {},
     albuns: [],
-    favorites: [],
   };
 
   componentDidMount() {
     this.getMusicAPI();
   }
-
-  componentDidUpdate() {
-    this.favoriteSongs();
-  }
-
-  favoriteSongs = async () => {
-    const favSongs = await getFavoriteSongs();
-    // const favSongsId = favSongs.map((id) => id.trackId);
-    this.setState({ favorites: favSongs });
-  };
 
   getMusicAPI = async () => {
     const { match } = this.props;

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 export default class MusicCard extends Component {
@@ -9,29 +9,31 @@ export default class MusicCard extends Component {
     loadingMusic: false,
   };
 
-  componentDidUpdate() {
-    // this.haveChecked();
+  componentDidMount() {
+    this.haveChecked();
   }
 
   handleChanges = async ({ target }) => {
-    const { checked, name } = target;
+    const { checked } = target;
     const { value } = this.props;
-    console.log(target);
-    this.setState(() => ({ [name]: checked, loadingMusic: true }));
-    await addSong(value);
-    this.setState({ loadingMusic: false });
-    this.haveChecked();
+    if (checked === true) {
+      this.setState(() => ({ inputChecked: checked, loadingMusic: true }));
+      await addSong(value);
+      this.setState({ loadingMusic: false });
+    } else {
+      this.setState(() => ({ inputChecked: checked, loadingMusic: true }));
+      await removeSong(value);
+      this.setState({ loadingMusic: false });
+    }
+    // this.haveChecked();
   };
 
-  haveChecked = () => {
-    const { favoriteSongs, value } = this.props;
-    const returned = favoriteSongs.some(
-      (fav) => fav.trackId === value.trackId,
-    );
-    if (returned) {
-      this.setState({ inputChecked: true });
-    }
-    console.log(returned);
+  haveChecked = async () => {
+    const { value } = this.props;
+    const favSongs = await getFavoriteSongs() || [];
+    const isFavorite = favSongs
+      .some((song) => song.trackId === value.trackId);
+    this.setState({ inputChecked: isFavorite });
   };
 
   render() {
@@ -73,9 +75,9 @@ export default class MusicCard extends Component {
 MusicCard.propTypes = {
   // favSongs: PropTypes.func.isRequired,
   // inputChecked: PropTypes.bool.isRequired,
-  favoriteSongs: PropTypes.shape(
-    PropTypes,
-  ).isRequired,
+  // favoriteSongs: PropTypes.shape(
+  //   PropTypes,
+  // ).isRequired,
   value: PropTypes.shape({
     previewUrl: PropTypes.string,
     trackId: PropTypes.number,
