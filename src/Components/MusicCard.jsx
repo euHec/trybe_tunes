@@ -25,7 +25,6 @@ export default class MusicCard extends Component {
       await removeSong(value);
       this.setState({ loadingMusic: false });
     }
-    // this.haveChecked();
   };
 
   haveChecked = async () => {
