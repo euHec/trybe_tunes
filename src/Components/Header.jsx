@@ -32,7 +32,7 @@ export default class Header extends Component {
         {
           loading ? <Loading /> : (
             <span data-testid="header-user-name">
-              {`Olá ${isName}`}
+              { isName }
             </span>
           )
         }
