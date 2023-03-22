@@ -9,12 +9,29 @@ export default class MusicCard extends Component {
     loadingMusic: false,
   };
 
+  componentDidUpdate() {
+    // this.haveChecked();
+  }
+
   handleChanges = async ({ target }) => {
     const { checked, name } = target;
     const { value } = this.props;
-    this.setState(() => ({ loadingMusic: true, [name]: checked }));
+    console.log(target);
+    this.setState(() => ({ [name]: checked, loadingMusic: true }));
     await addSong(value);
     this.setState({ loadingMusic: false });
+    this.haveChecked();
+  };
+
+  haveChecked = () => {
+    const { favoriteSongs, value } = this.props;
+    const returned = favoriteSongs.some(
+      (fav) => fav.trackId === value.trackId,
+    );
+    if (returned) {
+      this.setState({ inputChecked: true });
+    }
+    console.log(returned);
   };
 
   render() {
@@ -54,6 +71,11 @@ export default class MusicCard extends Component {
 }
 
 MusicCard.propTypes = {
+  // favSongs: PropTypes.func.isRequired,
+  // inputChecked: PropTypes.bool.isRequired,
+  favoriteSongs: PropTypes.shape(
+    PropTypes,
+  ).isRequired,
   value: PropTypes.shape({
     previewUrl: PropTypes.string,
     trackId: PropTypes.number,
