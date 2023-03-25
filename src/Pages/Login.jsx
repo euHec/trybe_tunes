@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Proptypes from 'prop-types';
 import Loading from '../Components/Loading';
 import { createUser } from '../services/userAPI';
+import './Login.css';
 
 export default class Login extends Component {
   constructor() {
@@ -49,22 +50,30 @@ export default class Login extends Component {
       );
     }
     return (
-      <div data-testid="page-login">
-        <span>Login</span>
-        <form onSubmit={ this.handleSubmit }>
-          <input
-            data-testid="login-name-input"
-            onChange={ this.handlechanges }
-            placeholder="Qual o seu nome?"
-            type="text"
-          />
-          <button
-            data-testid="login-submit-button"
-            disabled={ disabled }
-          >
-            Enviar
-          </button>
-        </form>
+      <div className="page-login" data-testid="page-login">
+        <div className="login">
+          <div className="title-login">
+            <h3>Trybe Tunes</h3>
+          </div>
+          <div className="form-login">
+            <form onSubmit={ this.handleSubmit }>
+              <input
+                className="input-login"
+                data-testid="login-name-input"
+                onChange={ this.handlechanges }
+                placeholder="Qual o seu nome?"
+                type="text"
+              />
+              <button
+                className="button-login"
+                data-testid="login-submit-button"
+                disabled={ disabled }
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }
