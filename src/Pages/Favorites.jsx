@@ -29,9 +29,13 @@ export default class Favorites extends Component {
         onChange={ this.favSongsOnLocalStorage }
       >
         <NavBar />
-        { loading
-          ? <Loading /> : (
-            favorite.map((fav) => <MusicCard key={ fav.trackId } value={ fav } />))}
+        <div className="content-favorites">
+          <div className="favorites">
+            { loading
+              ? <Loading /> : (
+                favorite.map((fav) => <MusicCard key={ fav.trackId } value={ fav } />))}
+          </div>
+        </div>
       </div>
     );
   }

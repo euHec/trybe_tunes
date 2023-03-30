@@ -49,6 +49,7 @@
 }
 
 .player {
+  width: 90%;
   align-items: center;
   border-radius: 20px;
   box-sizing: border-box;
