@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
-import Header from '../Components/Header';
+import NavBar from '../Components/NavBar';
 import MusicCard from '../Components/MusicCard';
 import './Album.css';
 // import { getFavoriteSongs } from '../services/favoriteSongsAPI';
@@ -27,21 +27,17 @@ export default class Album extends Component {
   render() {
     const { albuns, data, favorites } = this.state;
     return (
-      <div data-testid="page-album">
-        <Header />
-        <div className="page-album">
-          <div className="data-album">
-            <div>
-              <img src={ data?.artworkUrl100 } alt={ data?.collectionName } />
-            </div>
-            <div>
-              <span data-testid="artist-name">{data?.artistName}</span>
-            </div>
-            <div>
-              <span data-testid="album-name">{data?.collectionName}</span>
-            </div>
+      <div className="page-album" data-testid="page-album">
+        <NavBar />
+        <div className="data-album">
+          <div className="card-album">
+            <img src={ data?.artworkUrl100 } alt={ data?.collectionName } />
+            <span data-testid="artist-name">{data?.artistName}</span>
+            <span data-testid="album-name">{data?.collectionName}</span>
           </div>
-          <div>
+        </div>
+        <div className="list-player">
+          <div className="players">
             {albuns.map((album, index) => (index !== 0)
                   && <MusicCard
                     key={ album.trackId }

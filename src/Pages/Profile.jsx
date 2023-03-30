@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
-import Header from '../Components/Header';
+import NavBar from '../Components/NavBar';
 import Loading from '../Components/Loading';
 
 export default class Profile extends Component {
@@ -32,7 +32,7 @@ export default class Profile extends Component {
     const { loading, description, email, image, name } = this.state;
     return (
       <div data-testid="page-profile">
-        <Header />
+        <NavBar />
         { loading ? <Loading /> : (
           <div>
             <div>

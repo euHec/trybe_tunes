@@ -1,12 +1,14 @@
 .page-login {
-    width: auto;
-    height: auto;
-    margin-top: 100px;
+    display: flex;
+    /* align-items: baseline; */
+    width: 100vw;
+    height: 100vh;
+    /* margin: auto; */
 }
 
 .login {
     border-radius: 50px;
-    box-shadow: 0px 0px 30px #ffffff;
+    box-shadow: 0px 0px 30px #eba475;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,12 +23,11 @@
     height: 100%;
     color: orangered;
     font-size: 40px;
-    /* text-shadow: 0px 0px 20px #ffffff; */
     text-align: center;
 }
 
 .title-login:hover {
-    text-shadow: 0px 0px 20px #ffffff;
+    text-shadow: 0px 0px 20px #eba475;
 }
 
 .form-login{

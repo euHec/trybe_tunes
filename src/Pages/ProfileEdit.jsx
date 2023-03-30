@@ -2,7 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getUser, updateUser } from '../services/userAPI';
-import Header from '../Components/Header';
+import NavBar from '../Components/NavBar';
 import Loading from '../Components/Loading';
 
 export default class ProfileEdit extends Component {
@@ -62,7 +62,7 @@ export default class ProfileEdit extends Component {
     const { loading, disabled, description, email, image, isName } = this.state;
     return (
       <div data-testid="page-profile-edit">
-        <Header />
+        <NavBar />
         { loading ? <Loading /> : (
           <div>
             <div>

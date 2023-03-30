@@ -51,6 +51,7 @@ export default class Login extends Component {
     }
     return (
       <div className="page-login" data-testid="page-login">
+        {/* <img src="Lo-fi concept-pana.svg" alt="img" /> */}
         <div className="login">
           <div className="title-login">
             <h3>Trybe Tunes</h3>

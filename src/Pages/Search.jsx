@@ -1,17 +1,19 @@
 import { Component } from 'react';
-import Header from '../Components/Header';
-// import Loading from '../Components/Loading';
+import { FaSearch } from 'react-icons/fa';
+import NavBar from '../Components/NavBar';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbumCard from '../Components/AlbumCard';
+import './Search.css';
+import Loading from '../Components/Loading';
 
 export default class Search extends Component {
   state = {
     disabled: true,
     itens: [],
-    // loading: false,
+    loading: false,
     search: '',
     artist: '',
-    // validate: false,
+    validate: false,
   };
 
   handlechanges = ({ target }) => {
@@ -36,17 +38,17 @@ export default class Search extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { search } = this.state;
-    // this.setState({ loading: true });
+    this.setState({ loading: true });
     const returned = await searchAlbumsAPI(search);
-    this.setState({ itens: returned, search: '' });
+    this.setState({ itens: returned, search: '', loading: false, disabled: true });
+    if (returned.length === 0) this.setState({ validate: true });
   };
 
   render() {
-    const { artist, disabled, search, itens } = this.state;
+    const { artist, disabled, search, itens, loading, validate } = this.state;
     return (
-      <div data-testid="page-search">
-        <Header />
-        <div>
+      <div className="page-search" data-testid="page-search">
+        <header>
           <form onSubmit={ this.handleSubmit }>
             <input
               data-testid="search-artist-input"
@@ -59,23 +61,27 @@ export default class Search extends Component {
               disabled={ disabled }
               data-testid="search-artist-button"
             >
-              Procurar
+              <FaSearch />
             </button>
           </form>
-        </div>
-        <div>
-          { itens.length !== 0 ? (
-            <div>
-              <span>
-                {`Resultado de álbuns de: ${artist}`}
-              </span>
-
-              { itens.map((item) => (
-                <AlbumCard key={ item.collectionId } value={ item } />)) }
-            </div>
-          ) : (
-            <div>
-              <span>Nenhum álbum foi encontrado</span>
+        </header>
+        <div className="area-content">
+          <NavBar />
+          { loading ? <Loading /> : (
+            <div className="list-albuns">
+              { itens.length !== 0 ? (
+                <>
+                  <div className="title-result">
+                    <h5>{`Resultado de álbuns de: ${artist}`}</h5>
+                  </div>
+                  <div className="albuns">
+                    { itens.map((item) => (
+                      <AlbumCard key={ item.collectionId } value={ item } />)) }
+                  </div>
+                </>
+              ) : (
+                validate && <span>Nenhum álbum foi encontrado</span>
+              )}
             </div>
           )}
         </div>

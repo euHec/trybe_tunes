@@ -1,0 +1,68 @@
+.page-search {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10%;
+}
+
+
+form input {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #888888;
+    height: 25px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+form button {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #888888;
+    height: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.area-content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 65px;
+    width: 100%;
+    height: 100%;
+}
+
+.title-result {
+    text-align: center;
+}
+
+.list-albuns {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.albuns {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
