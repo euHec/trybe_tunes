@@ -3,7 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import NavBar from '../Components/NavBar';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbumCard from '../Components/AlbumCard';
-import './Search.css';
+import '../styles/Search.css';
 import Loading from '../Components/Loading';
 // import SearchMusic from '../Imagens/Playlist-pana.svg';
 

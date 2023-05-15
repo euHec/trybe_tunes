@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import NavBar from '../Components/NavBar';
 import Loading from '../Components/Loading';
-import './Profile.css';
+import '../styles/Profile.css';
 
 export default class Profile extends Component {
   state = {

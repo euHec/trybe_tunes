@@ -4,7 +4,7 @@ import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import NavBar1 from './NavBar/NavBar1';
 import NavBar2 from './NavBar/NavBar2';
-import './NavBar.css';
+import '../styles/NavBar.css';
 
 export default class NavBar extends Component {
   constructor() {

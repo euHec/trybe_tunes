@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
 import NavBar from '../Components/NavBar';
 import MusicCard from '../Components/MusicCard';
-import './Album.css';
+import '../styles/Album.css';
 // import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 export default class Album extends Component {

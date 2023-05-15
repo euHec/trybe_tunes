@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Proptypes from 'prop-types';
 import Loading from '../Components/Loading';
 import { createUser } from '../services/userAPI';
-import './Login.css';
+import '../styles/Login.css';
 import logo from '../Imagens/logo.svg';
 
 export default class Login extends Component {

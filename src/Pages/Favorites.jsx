@@ -4,7 +4,7 @@ import Loading from '../Components/Loading';
 import MusicCard from '../Components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Headphone2 from '../Imagens/Headphone-pana.svg';
-import './Favorites.css';
+import '../styles/Favorites.css';
 
 export default class Favorites extends Component {
   state = {

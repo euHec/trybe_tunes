@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import './AlbumCard.css';
+import '../styles/AlbumCard.css';
 
 export default class AlbumCard extends Component {
   render() {
