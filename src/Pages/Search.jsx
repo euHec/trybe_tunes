@@ -5,7 +5,7 @@ import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbumCard from '../Components/AlbumCard';
 import '../styles/Search.css';
 import Loading from '../Components/Loading';
-// import SearchMusic from '../Imagens/Playlist-pana.svg';
+import SearchMusic from '../Imagens/Playlist-pana.svg';
 
 export default class Search extends Component {
   state = {
@@ -67,6 +67,7 @@ export default class Search extends Component {
         <div className="area-content">
           <NavBar />
           <div className="list-albuns">
+            { !validItens && <img src={ SearchMusic } alt="" className="img-search" /> }
             { validItens ? (
               <>
                 <div className="title-result">

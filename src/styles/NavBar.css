@@ -1,95 +1,228 @@
-.nav-bar-1 {
-    position: absolute;
-    width: 60px;
-    height: 100%;
-    background-color: black;
-    animation: hideSidebar;
-    animation-duration: .1s;
-}
+@media only screen and (max-width: 480px) {
 
-@keyframes showSidebar {
-    from {
-      opacity: 1;
-      width: 60px;
+    @keyframes showSidebar {
+        from {
+          opacity: 1;
+          height: 84px;
+        }
+        to {
+          opacity: 1;
+          height: 168px
+        }
     }
-    to {
-      opacity: 1;
-      width: 200px;
+
+    .nav-bar-1 {
+        display: none;
+    }
+    
+    .nav-bar-2 {
+        animation: showSidebar;
+        animation-duration: .4s;
+        background-color: black;
+        height: 20%;
+        position: absolute;
+        top: 10%;
+        width: 100vw;
+        z-index: 1;
+    }
+    
+    .show-nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .icon-element {
+        align-items: center;
+        color: orangered;
+        display: flex;
+        font-size: 25px;
+        height: 10%;
+        justify-content: center;
+        position: absolute;
+        width: 20%;
+        z-index: 1;
+    }
+    
+    .nav-name {
+        display: none;
+    }
+    
+    .links > a {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        text-align: center;
+        color: orangered;
+        margin-right: 5px;
+    }
+
+    .links > a svg {
+        font-size: 20px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .links > a p {
+        color: orangered;
     }
 }
 
-.nav-bar-2 {
-    position: absolute;
-    width: 200px;
-    height: 100%;
-    background-color: black;
-    animation: showSidebar;
-    animation-duration: .4s;
-}
+@media only screen and (min-width: 481px) and (max-width: 960px ) {
 
-/* @keyframes hideSidebar {
-    from {
-      opacity: 1;
-      width: 200px;
+    @keyframes showSidebar {
+        from {
+          opacity: 1;
+          height: 84px;
+        }
+        to {
+          opacity: 1;
+          height: 205px
+        }
     }
-    to {
-      opacity: 1;
-      width: 60px;
+
+    .nav-bar-1 {
+        display: none;
     }
-} */
+    
+    .nav-bar-2 {
+        animation: showSidebar;
+        animation-duration: .4s;
+        background-color: black;
+        height: 15%;
+        position: absolute;
+        top: 10%;
+        width: 100vw;
+        z-index: 1;
+    }
+    
+    .show-nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.icon-nav {
-    position: absolute;
-    display: flex;
-    margin-top: 15px;
-    width: 100%;
-    justify-content: center;
-    background-color: black;
-    color: white;
+    .icon-element {
+        align-items: center;
+        color: orangered;
+        display: flex;
+        font-size: 25px;
+        height: 10%;
+        justify-content: center;
+        position: absolute;
+        width: 20%;
+        z-index: 1;
+    }
+    
+    .nav-name {
+        display: none;
+    }
+    
+    .links > a {
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        text-align: center;
+        color: orangered;
+        width: 12vw;
+    }
+
+    .links > a svg {
+        font-size: 20px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .links > a p {
+        color: orangered;
+    }
 }
 
-.icon-element:hover {
-    background-color: orangered;
-}
+@media only screen and (min-width: 961px) {
 
-.nav-bar-section1 {
-    display: flex;
-    flex-direction: column;
-    height: 60%;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    animation: showSidebar;
-}
+    @keyframes showSidebar {
+        from {
+          opacity: 1;
+          width: 60px;
+        }
+        to {
+          opacity: 1;
+          width: 15vw
+        }
+    }
 
-.nav-bar-section2 {
-    height: 40%;
-    display: flex;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
+    .nav-bar-1 {
+        display: flex;
+        background-color: black;
+        flex-direction: column;
+        height: 90%;
+        position: absolute;
+        top: 10%;
+        width: 5vw;
+        z-index: 1;
+    }
+    
+    .nav-bar-2 {
+        animation: showSidebar;
+        animation-duration: .4s;
+        background-color: black;
+        height: 90%;
+        position: absolute;
+        top: 10%;
+        width: 15vw;
+        z-index: 1;
+    }
+    
+    .icon-element {
+        align-items: center;
+        background-color: black;
+        color: orangered;
+        display: flex;
+        font-size: 25px;
+        height: 10%;
+        justify-content: center;
+        position: absolute;
+        width: 5%;
+        z-index: 1;
+    }
 
-.links {
-    padding: 15px;
-    animation: showSidebar;
-}
+    .show-nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.links > a {
-    display: flex;
-    text-decoration: none;
-    color: white;
-    animation: showSidebar;
-}
+    .hide-nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .links {
+        margin-top: 5px;
+        height: 50px;
+    }
 
-.links > a:hover {
-    color: orangered;
-}
+    .links > a {
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        text-align: center;
+        color: orangered;
+        justify-content: center;
+    }
 
-.links div {
-    margin: 5px;
+    .links > a svg {
+        font-size: 20px;
+        width: 30px;
+    }
+
+    .links > a p {
+        color: orangered;
+    }
 }

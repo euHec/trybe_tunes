@@ -5,7 +5,7 @@ import { FaUserAlt, FaSearch, FaRegHeart } from 'react-icons/fa';
 export default class NavBar1 extends Component {
   render() {
     return (
-      <>
+      <div className="hide-nav">
         <div className="links">
           <Link to="/search" data-testid="link-to-search">
             <FaSearch />
@@ -21,7 +21,7 @@ export default class NavBar1 extends Component {
             <FaUserAlt />
           </Link>
         </div>
-      </>
+      </div>
     );
   }
 }
