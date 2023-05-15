@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import NavBar from '../Components/NavBar';
 import Loading from '../Components/Loading';
+import './Profile.css';
 
 export default class Profile extends Component {
   state = {
@@ -31,27 +32,32 @@ export default class Profile extends Component {
   render() {
     const { loading, description, email, image, name } = this.state;
     return (
-      <div data-testid="page-profile">
+      <div className="page-profile" data-testid="page-profile">
         <NavBar />
-        { loading ? <Loading /> : (
-          <div>
-            <div>
-              <img src={ image } alt={ name } data-testid="profile-image" />
-            </div>
-            <div>
-              <p>{ name }</p>
-            </div>
-            <div>
-              <p>{ email }</p>
-            </div>
-            <div>
-              <p>{ description }</p>
-            </div>
-            <div>
-              <Link to="/profile/edit"><button>Editar perfil</button></Link>
-            </div>
-          </div>
-        )}
+        <div className="profile-content">
+          { loading ? <Loading /> : (
+            <>
+              <div className="profile">
+                <div className="profile-image">
+                  <img src={ image } alt={ name } data-testid="profile-image" />
+                </div>
+                <div className="profile-data">
+                  <h5>Nome</h5>
+                  <p>{ name }</p>
+                  <h5>E-mail</h5>
+                  <p>{ email }</p>
+                  <h5>Descrição</h5>
+                  <p>{ description }</p>
+                </div>
+              </div>
+              <div className="div-button">
+                <Link to="/profile/edit">
+                  <button className="button-edit">Editar perfil</button>
+                </Link>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     );
   }

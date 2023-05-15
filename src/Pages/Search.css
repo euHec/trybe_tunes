@@ -14,19 +14,25 @@ header {
     color: white;
     width: 100%;
     height: 10%;
+    margin-left: 45px;
 }
 
+header > form {
+    width: 100%;
+    text-align: center;
+}
 
-form input {
+.input-search {
     border: none;
     border-radius: 20px;
     box-shadow: 0px 0px 15px #888888;
-    height: 25px;
+    height: 35px;
+    width: 50%;
     text-align: center;
     margin: 0px 10px;
 }
 
-form button {
+.button-search {
     border: none;
     border-radius: 20px;
     box-shadow: 0px 0px 15px #888888;
@@ -36,11 +42,18 @@ form button {
 }
 
 .area-content {
+    background-color: white;
     display: flex;
     flex-direction: row;
-    padding-top: 65px;
     width: 100%;
     height: 100%;
+}
+
+.img-search {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
 }
 
 .title-result {
@@ -54,9 +67,12 @@ form button {
     height: 85vh;
     width: 100%;
     overflow-y: scroll;
+    padding-top: 65px;
+    padding-left: 65px;
 }
 
 .albuns {
+
     height: 100%;
     display: flex;
     flex-flow: row wrap;

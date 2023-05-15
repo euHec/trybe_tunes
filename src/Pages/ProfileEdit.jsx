@@ -61,11 +61,11 @@ export default class ProfileEdit extends Component {
   render() {
     const { loading, disabled, description, email, image, isName } = this.state;
     return (
-      <div data-testid="page-profile-edit">
+      <div className="page-profile-edit" data-testid="page-profile-edit">
         <NavBar />
         { loading ? <Loading /> : (
-          <div>
-            <div>
+          <div className="profile-edit">
+            <div className="profile-inputs">
               <input
                 data-testid="edit-input-image"
                 type="url"
@@ -73,8 +73,6 @@ export default class ProfileEdit extends Component {
                 name="image"
                 onChange={ this.handleChange }
               />
-            </div>
-            <div>
               <input
                 data-testid="edit-input-name"
                 type="text"
@@ -82,8 +80,6 @@ export default class ProfileEdit extends Component {
                 name="isName"
                 onChange={ this.handleChange }
               />
-            </div>
-            <div>
               <input
                 data-testid="edit-input-email"
                 type="email"
@@ -91,8 +87,6 @@ export default class ProfileEdit extends Component {
                 name="email"
                 onChange={ this.handleChange }
               />
-            </div>
-            <div>
               <textarea
                 cols="30"
                 rows="10"
@@ -102,8 +96,6 @@ export default class ProfileEdit extends Component {
                 name="description"
                 onChange={ this.handleChange }
               />
-            </div>
-            <div>
               <Link to="/profile">
                 <button
                   data-testid="edit-button-save"

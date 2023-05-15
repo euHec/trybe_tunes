@@ -27,27 +27,29 @@ export default class Album extends Component {
   render() {
     const { albuns, data, favorites } = this.state;
     return (
-      <div className="page-album" data-testid="page-album">
+      <>
         <NavBar />
-        <div className="data-album">
-          <div className="card-album">
-            <img src={ data?.artworkUrl100 } alt={ data?.collectionName } />
-            <span data-testid="artist-name">{data?.artistName}</span>
-            <span data-testid="album-name">{data?.collectionName}</span>
+        <div className="page-album" data-testid="page-album">
+          <div className="data-album">
+            <div className="card-album">
+              <img src={ data?.artworkUrl100 } alt={ data?.collectionName } />
+              <span data-testid="artist-name">{data?.artistName}</span>
+              <span data-testid="album-name">{data?.collectionName}</span>
+            </div>
+          </div>
+          <div className="list-player">
+            <div className="players">
+              {albuns.map((album, index) => (index !== 0)
+                    && <MusicCard
+                      key={ album.trackId }
+                      value={ album }
+                      favoriteSongs={ favorites }
+                      handleChanges={ this.handleChanges }
+                    />)}
+            </div>
           </div>
         </div>
-        <div className="list-player">
-          <div className="players">
-            {albuns.map((album, index) => (index !== 0)
-                  && <MusicCard
-                    key={ album.trackId }
-                    value={ album }
-                    favoriteSongs={ favorites }
-                    handleChanges={ this.handleChanges }
-                  />)}
-          </div>
-        </div>
-      </div>
+      </>
     );
   }
 }

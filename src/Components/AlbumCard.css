@@ -1,6 +1,6 @@
 .album {
     border-radius: 10px;
-    background-color: rgba(255, 94, 0, 0.781);
+    background-color: black;
     display: flex;
     margin-bottom: 5px;
     width: 300px;
@@ -11,7 +11,7 @@
 }
 
 .album:hover {
-    background-color: rgba(245, 133, 67, 0.781);
+    background-color: rgb(245, 133, 67);
     -moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);

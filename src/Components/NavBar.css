@@ -1,7 +1,55 @@
-.nav-bar {
-    width: 15%;
+.nav-bar-1 {
+    position: absolute;
+    width: 60px;
     height: 100%;
-    background-color: #fff;
+    background-color: black;
+    animation: hideSidebar;
+    animation-duration: .1s;
+}
+
+@keyframes showSidebar {
+    from {
+      opacity: 1;
+      width: 60px;
+    }
+    to {
+      opacity: 1;
+      width: 200px;
+    }
+}
+
+.nav-bar-2 {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    animation: showSidebar;
+    animation-duration: .4s;
+}
+
+/* @keyframes hideSidebar {
+    from {
+      opacity: 1;
+      width: 200px;
+    }
+    to {
+      opacity: 1;
+      width: 60px;
+    }
+} */
+
+.icon-nav {
+    position: absolute;
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.icon-element:hover {
+    background-color: orangered;
 }
 
 .nav-bar-section1 {
@@ -10,18 +58,38 @@
     height: 60%;
     align-items: center;
     justify-content: center;
+    color: white;
+    background-color: black;
+    animation: showSidebar;
 }
 
 .nav-bar-section2 {
     height: 40%;
     display: flex;
     margin: 0;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
-    color: orangered;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.links {
+    padding: 15px;
+    animation: showSidebar;
 }
 
 .links > a {
+    display: flex;
     text-decoration: none;
+    color: white;
+    animation: showSidebar;
+}
+
+.links > a:hover {
     color: orangered;
+}
+
+.links div {
+    margin: 5px;
 }

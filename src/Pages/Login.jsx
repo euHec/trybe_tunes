@@ -3,6 +3,7 @@ import Proptypes from 'prop-types';
 import Loading from '../Components/Loading';
 import { createUser } from '../services/userAPI';
 import './Login.css';
+import logo from '../Imagens/logo.svg';
 
 export default class Login extends Component {
   constructor() {
@@ -51,10 +52,9 @@ export default class Login extends Component {
     }
     return (
       <div className="page-login" data-testid="page-login">
-        {/* <img src="Lo-fi concept-pana.svg" alt="img" /> */}
         <div className="login">
-          <div className="title-login">
-            <h3>Trybe Tunes</h3>
+          <div className="logo-login">
+            <img src={ logo } alt="logo" />
           </div>
           <div className="form-login">
             <form onSubmit={ this.handleSubmit }>

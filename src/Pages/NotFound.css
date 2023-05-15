@@ -1,0 +1,9 @@
+.page-not-found {
+    background-image: url(../Imagens/pageNotFound.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}

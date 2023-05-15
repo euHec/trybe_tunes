@@ -10,7 +10,6 @@ export default class AlbumCard extends Component {
       artistName,
       collectionId,
       collectionName,
-      collectionPrice,
       artworkUrl100,
     } = value;
     return (
@@ -25,7 +24,6 @@ export default class AlbumCard extends Component {
           <div className="album-infos">
             <p>{artistName}</p>
             <p>{collectionName}</p>
-            <p>{collectionPrice}</p>
           </div>
         </div>
       </Link>

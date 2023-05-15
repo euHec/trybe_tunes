@@ -1,8 +1,10 @@
 .page-album {
+  background-color: white;
   height: 100vh;
   display: flex;
   flex-flow: row;
   align-items: center;
+  margin-left: 60px;
 }
 
 .data-album {
@@ -11,11 +13,11 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 
 .card-album:hover {
-  background-color: rgba(245, 133, 67, 0.781);
+  background-color: rgb(245, 133, 67);
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -25,7 +27,8 @@
 .card-album {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
+  height: auto;
   -moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -36,14 +39,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: 100%;
   overflow-y: scroll;
 }
 
 .players {
   box-sizing: border-box;
-  width: 80%;
+  width: 90%;
   height: 100%;
   overflow-y: scroll;
 }
@@ -74,21 +77,26 @@
 
 .player-name {
   text-align: center;
-  width: 30%;
+  width: 40%;
 }
 
 .player-audio {
-  width: 60%;
+  width: 50%;
+}
+
+.player-audio audio {
+  width: 80%;
 }
 
 .player-favorite {
   width: 10%;
 }
 
-/* input {
-  /* display: none;
+.player-favorite input {
+  display: none;
 }
 
+/*
 input:checked + label > sgv {
   animation: preencher;
   animation-duration: 0.5s;

@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { FaUserAlt, FaSearch, FaRegHeart } from 'react-icons/fa';
+import { FaTimes, FaGripLines } from 'react-icons/fa';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import NavBar1 from './NavBar/NavBar1';
+import NavBar2 from './NavBar/NavBar2';
 import './NavBar.css';
 
 export default class NavBar extends Component {
@@ -11,6 +12,7 @@ export default class NavBar extends Component {
     this.state = {
       isName: '',
       loading: true,
+      icon: true,
     };
     this.getName = this.getName.bind(this);
   }
@@ -26,29 +28,35 @@ export default class NavBar extends Component {
     });
   };
 
+  changeIcon = () => {
+    const { icon } = this.state;
+    if (icon === true) {
+      this.setState(
+        { icon: false },
+      );
+    } else {
+      this.setState(
+        { icon: true },
+      );
+    }
+  };
+
   render() {
-    const { loading, isName } = this.state;
+    const { loading, isName, icon } = this.state;
     return (
-      <div className="nav-bar" data-testid="header-component">
+      <div
+        className={ icon ? 'nav-bar-1' : 'nav-bar-2' }
+        data-testid="header-component"
+      >
+        <div className="icon-nav">
+          <i className="icon-element">
+            { icon
+              ? (<FaGripLines onClick={ this.changeIcon } />)
+              : (<FaTimes onClick={ this.changeIcon } />)}
+          </i>
+        </div>
         <div className="nav-bar-section1">
-          <div className="links">
-            <Link to="/search" data-testid="link-to-search">
-              Pesquisa
-              <FaSearch />
-            </Link>
-          </div>
-          <div className="links">
-            <Link to="/favorites" data-testid="link-to-favorites">
-              Favoritos
-              <FaRegHeart />
-            </Link>
-          </div>
-          <div className="links">
-            <Link to="/profile" data-testid="link-to-profile">
-              Perfil
-              <FaUserAlt />
-            </Link>
-          </div>
+          { icon ? <NavBar1 /> : <NavBar2 /> }
         </div>
         <div className="nav-bar-section2">
           {
