@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/trybe_tunes/static/css/main.98ffade1.css",
-    "main.js": "/trybe_tunes/static/js/main.28c27f1d.js",
+    "main.js": "/trybe_tunes/static/js/main.423fa25d.js",
     "static/media/Playlist-pana.svg": "/trybe_tunes/static/media/Playlist-pana.94c7a865fa46b769fb02e780a37e75db.svg",
     "static/media/Headphone-pana.svg": "/trybe_tunes/static/media/Headphone-pana.865427d2eeffce5785da087be6f123a1.svg",
     "static/media/pageNotFound.svg": "/trybe_tunes/static/media/pageNotFound.fba5aa90823bd94e1a8f.svg",
     "static/media/logo.svg": "/trybe_tunes/static/media/logo.5e7005ac2adfd89c8c7e3c782da5fa34.svg",
     "index.html": "/trybe_tunes/index.html",
     "main.98ffade1.css.map": "/trybe_tunes/static/css/main.98ffade1.css.map",
-    "main.28c27f1d.js.map": "/trybe_tunes/static/js/main.28c27f1d.js.map"
+    "main.423fa25d.js.map": "/trybe_tunes/static/js/main.423fa25d.js.map"
   },
   "entrypoints": [
     "static/css/main.98ffade1.css",
-    "static/js/main.28c27f1d.js"
+    "static/js/main.423fa25d.js"
   ]
 }
