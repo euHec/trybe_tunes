@@ -18,8 +18,8 @@
     .nav-bar-2 {
         animation: showSidebar;
         animation-duration: .4s;
-        background-color: black;
-        height: 20%;
+        background-color: orangered;
+        height: 25%;
         position: absolute;
         top: 10%;
         width: 100vw;
@@ -55,7 +55,7 @@
         justify-content: space-evenly;
         text-decoration: none;
         text-align: center;
-        color: orangered;
+        color: white;
         margin-right: 5px;
     }
 
@@ -66,7 +66,7 @@
     }
 
     .links > a p {
-        color: orangered;
+        color: white;
     }
 }
 
@@ -90,8 +90,8 @@
     .nav-bar-2 {
         animation: showSidebar;
         animation-duration: .4s;
-        background-color: black;
-        height: 15%;
+        background-color: orangered;
+        height: 12%;
         position: absolute;
         top: 10%;
         width: 100vw;
@@ -126,7 +126,7 @@
         display: flex;
         text-decoration: none;
         text-align: center;
-        color: orangered;
+        color: white;
         width: 12vw;
     }
 
@@ -137,7 +137,7 @@
     }
 
     .links > a p {
-        color: orangered;
+        color: white;
     }
 }
 
@@ -186,7 +186,8 @@
         justify-content: center;
         position: absolute;
         width: 5%;
-        z-index: 1;
+        top: 0;
+        z-index: 3;
     }
 
     .show-nav {

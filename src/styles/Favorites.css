@@ -1,14 +1,104 @@
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
 
-@media only screen and (min-width: 481px) and (max-width: 960px ) {}
+    .page-favorites {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
 
-@media only screen and (min-width: 961px) {}
+    .content-favorites {
+        padding-top: 10%;
+        align-items: center;
+        background-color: white;
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%
+    }
+
+    .favorites {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        overflow-y: scroll;
+    }
+
+    .content-favorites h3 {
+        font-size: 25px;
+        padding: 2px;
+    }
+
+    .conteiner-fav-img {
+        width: 90%;
+    }
+
+    .conteiner-fav-title {
+        width: 90%;
+    }
+
+    .img-fav {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 960px ) {
+
+    .page-favorites {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .content-favorites {
+        padding-top: 10%;
+        align-items: center;
+        background-color: white;
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .favorites {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        overflow-y: scroll;
+    }
+
+    .content-favorites h3 {
+        font-size: 25px;
+        padding: 2px;
+    }
+
+    .conteiner-fav-img {
+        width: 90%;
+    }
+
+    .conteiner-fav-title {
+        width: 90%;
+    }
+
+    .img-fav {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 961px) {
 
 .page-favorites {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     width: 100vw;
     height: 100vh;
 }
@@ -50,4 +140,5 @@
 .img-fav {
     width: 300px;
     height: auto;
+}
 }

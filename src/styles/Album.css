@@ -1,119 +1,273 @@
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
 
-@media only screen and (min-width: 481px) and (max-width: 960px ) {}
-
-@media only screen and (min-width: 961px) {}
-
-.page-album {
-  background-color: white;
-  height: 100vh;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  margin-left: 60px;
-}
-
-.data-album {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-}
-
-.card-album:hover {
-  background-color: rgb(245, 133, 67);
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  box-sizing: border-box;
-}
-
-.card-album {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: auto;
-  -moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-  box-sizing: border-box;
-}
-
-.list-player {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.players {
-  box-sizing: border-box;
-  width: 90%;
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.player {
-  width: 90%;
-  align-items: center;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 10px;
-	transition: all 0.3s;
-  -moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-}
-
-.player:hover {
-  background-color: rgba(245, 133, 67, 0.781);
-  border-radius: 20px;
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.08);
-  box-sizing: border-box;
-}
-
-
-.player-name {
-  text-align: center;
-  width: 40%;
-}
-
-.player-audio {
-  width: 50%;
-}
-
-.player-audio audio {
-  width: 80%;
-}
-
-.player-favorite {
-  width: 10%;
-}
-
-.player-favorite input {
-  display: none;
-}
-
-/*
-input:checked + label > sgv {
-  animation: preencher;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes preencher {
-  0% {
-    fill: transparent;
+  .page-album {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
-  100% {
-    fill: #000000;
+
+  .data-album {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+    width: 100%;
   }
-} */
+
+  .card-album {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+
+  .list-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+    overflow-y: scroll;
+  }
+
+  .players {
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .player {
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+  }
+
+  .player-name {
+    text-align: center;
+  }
+
+  .player-name h3 {
+    margin: 2px auto;
+  }
+
+  .player-favorite {
+    padding: 5px;
+    font-size: 20px;
+    height: 20px;
+  }
+
+  .player-favorite input {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 960px ) {
+
+
+  .page-album {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .data-album {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 16%;
+    width: 100%;
+  }
+
+  .card-album {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+
+  .list-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+    margin-top: 20px;
+    overflow-y: scroll;
+  }
+
+  .players {
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .player {
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+  }
+
+  .player-favorite {
+    padding: 5px;
+    font-size: 20px;
+    height: 20px;
+  }
+
+  .player-favorite input {
+    display: none;
+  }
+
+  .player-name {
+    text-align: center;
+    width: 40%;
+  }
+
+  .player-audio {
+    width: 50%;
+  }
+
+  .player-audio audio {
+    width: 80%;
+  }
+
+  .player-favorite {
+    width: 10%;
+  }
+
+  .player-favorite input {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 961px) {
+
+  .page-album {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding-left: 60px;
+  }
+
+  .data-album {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+
+  .card-album:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    box-sizing: border-box;
+    transform: scale(1.1);
+  }
+
+  .card-album {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+
+  .list-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 80%;
+    overflow-y: scroll;
+  }
+
+  .players {
+    box-sizing: border-box;
+    width: 90%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .player {
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+  }
+
+  .player:hover {
+    background-color: rgba(245, 133, 67, 0.781);
+    border-radius: 20px;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.08);
+    box-sizing: border-box;
+  }
+
+
+  .player-name {
+    text-align: center;
+    width: 40%;
+  }
+
+  .player-audio {
+    width: 50%;
+  }
+
+  .player-audio audio {
+    width: 80%;
+  }
+
+  .player-favorite {
+    width: 10%;
+  }
+
+  .player-favorite input {
+    display: none;
+  }
+
+}

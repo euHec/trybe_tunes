@@ -33,28 +33,30 @@ export default class Favorites extends Component {
         <NavBar />
         <div className="content-favorites">
           {
-            !favorite.length
-              ? (
-                <>
-                  <div className="conteiner-fav-title">
-                    <h3>Nenhuma música por aqui, ainda!</h3>
-                  </div>
-                  <div className="conteiner-fav-img">
-                    <img className="img-fav" src={ Headphone2 } alt="img" />
-                  </div>
-                </>
-              ) : (
-                <div className="favorites">
-                  { loading
-                    ? <Loading />
-                    : (
-                      favorite.map((fav) => (
-                        <MusicCard
-                          key={ fav.trackId }
-                          value={ fav }
-                        />)))}
+            !favorite.length && (
+              <>
+                <div className="conteiner-fav-title">
+                  <h3>Nenhuma música por aqui, ainda!</h3>
                 </div>
-              )
+                <div className="conteiner-fav-img">
+                  <img className="img-fav" src={ Headphone2 } alt="img" />
+                </div>
+              </>
+            )
+          }
+          {
+            favorite.length !== 0 && (
+              <div className="favorites">
+                { loading
+                  ? <Loading />
+                  : (
+                    favorite.map((fav) => (
+                      <MusicCard
+                        key={ fav.trackId }
+                        value={ fav }
+                      />)))}
+              </div>
+            )
           }
         </div>
       </div>

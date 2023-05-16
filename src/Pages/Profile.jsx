@@ -39,7 +39,10 @@ export default class Profile extends Component {
             <>
               <div className="profile">
                 <div className="profile-image">
-                  <img src={ image } alt={ name } data-testid="profile-image" />
+                  {
+                    image
+                      && <img src={ image } alt={ name } data-testid="profile-image" />
+                  }
                 </div>
                 <div className="profile-data">
                   <h5>Nome</h5>

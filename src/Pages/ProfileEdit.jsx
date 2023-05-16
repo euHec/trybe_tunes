@@ -67,6 +67,7 @@ export default class ProfileEdit extends Component {
           <div className="profile-edit">
             <div className="profile-inputs">
               <input
+                placeholder="Link da foto"
                 data-testid="edit-input-image"
                 type="url"
                 value={ image }
@@ -74,6 +75,7 @@ export default class ProfileEdit extends Component {
                 onChange={ this.handleChange }
               />
               <input
+                placeholder="Seu nome"
                 data-testid="edit-input-name"
                 type="text"
                 value={ isName }
@@ -81,6 +83,7 @@ export default class ProfileEdit extends Component {
                 onChange={ this.handleChange }
               />
               <input
+                placeholder="Seu e-mail"
                 data-testid="edit-input-email"
                 type="email"
                 value={ email }
@@ -88,6 +91,7 @@ export default class ProfileEdit extends Component {
                 onChange={ this.handleChange }
               />
               <textarea
+                placeholder="Sobre você"
                 cols="30"
                 rows="10"
                 data-testid="edit-input-description"

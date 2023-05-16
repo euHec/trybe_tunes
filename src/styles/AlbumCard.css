@@ -1,59 +1,167 @@
-@media only screen and (max-width: 480px) {}
-
-@media only screen and (min-width: 481px) and (max-width: 960px ) {}
-
-@media only screen and (min-width: 961px) {}
-
-.album {
-    border-radius: 10px;
-    background-color: black;
-    display: flex;
-    margin-bottom: 5px;
-    width: 300px;
-    height: 100px;
-    -moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+@media only screen and (max-width: 480px) {
+    .album {
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        margin-bottom: 5px;
+        width: 300px;
+        height: 100px;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .album:hover {
+        background-color: rgb(245, 133, 67);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    .albuns > a {
+        text-decoration: none;
+    }
+    
+    .album-img {
+        width: 40%;
+        display: flex;
+        justify-content: baseline;
+    }
+    
+    .album-img img {
+        width: auto;
+        height: 90%;
+        margin: auto;
+    }
+    
+    .album-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        padding: 5px;
+    }
+    
+    .album-infos > p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+    
+    p {
+        color: rgb(255, 255, 255);
+    }
 }
 
-.album:hover {
-    background-color: rgb(245, 133, 67);
-    -moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+@media only screen and (min-width: 481px) and (max-width: 960px ) {
+    .album {
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        margin-bottom: 5px;
+        width: 300px;
+        height: 100px;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .album:hover {
+        background-color: rgb(245, 133, 67);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    .albuns > a {
+        text-decoration: none;
+    }
+    
+    .album-img {
+        width: 40%;
+        display: flex;
+        justify-content: baseline;
+    }
+    
+    .album-img img {
+        width: auto;
+        height: 90%;
+        margin: auto;
+    }
+    
+    .album-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        padding: 5px;
+    }
+    
+    .album-infos > p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+    
+    p {
+        color: rgb(255, 255, 255);
+    }
 }
 
-.albuns > a {
-    text-decoration: none;
-}
-
-.album-img {
-    width: 40%;
-    display: flex;
-    justify-content: baseline;
-}
-
-.album-img img {
-    width: auto;
-    height: 90%;
-    margin: auto;
-}
-
-.album-infos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-    padding: 5px;
-}
-
-.album-infos > p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin: 0;
-}
-
-p {
-    color: rgb(255, 255, 255);
+@media only screen and (min-width: 961px) {
+    .album {
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        margin-bottom: 5px;
+        width: 300px;
+        height: 100px;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    
+    .album:hover {
+        background-color: rgb(245, 133, 67);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    .albuns > a {
+        text-decoration: none;
+    }
+    
+    .album-img {
+        width: 40%;
+        display: flex;
+        justify-content: baseline;
+    }
+    
+    .album-img img {
+        width: auto;
+        height: 90%;
+        margin: auto;
+    }
+    
+    .album-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        padding: 5px;
+    }
+    
+    .album-infos > p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+    
+    p {
+        color: rgb(255, 255, 255);
+    }
 }
