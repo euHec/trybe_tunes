@@ -14,7 +14,7 @@ export default class AlbumCard extends Component {
     } = value;
     return (
       <Link
-        to={ `/trybe_tunes/album/${collectionId}` }
+        to={ `/album/${collectionId}` }
         data-testid={ `link-to-album-${collectionId}` }
       >
         <div className="album">

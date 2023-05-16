@@ -7,19 +7,19 @@ export default class NavBar1 extends Component {
     return (
       <div className="show-nav">
         <div className="links">
-          <Link to="/trybe_tunes/search" data-testid="link-to-search">
+          <Link to="/search" data-testid="link-to-search">
             <FaSearch />
             <p>Pesquisa</p>
           </Link>
         </div>
         <div className="links">
-          <Link to="/trybe_tunes/favorites" data-testid="link-to-favorites">
+          <Link to="/favorites" data-testid="link-to-favorites">
             <FaRegHeart />
             <p>Favoritos</p>
           </Link>
         </div>
         <div className="links">
-          <Link to="/trybe_tunes/profile" data-testid="link-to-profile">
+          <Link to="/profile" data-testid="link-to-profile">
             <FaUserAlt />
             <p>Perfil</p>
           </Link>

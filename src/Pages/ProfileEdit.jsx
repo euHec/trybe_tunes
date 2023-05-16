@@ -34,7 +34,7 @@ export default class ProfileEdit extends Component {
     const { description, email, image, isName: name } = this.state;
     const { history } = this.props;
     updateUser({ description, email, image, name });
-    history.push('/trybe_tunes/profile');
+    history.push('/profile');
   };
 
   handleChange = ({ target }) => {
@@ -100,7 +100,7 @@ export default class ProfileEdit extends Component {
                 name="description"
                 onChange={ this.handleChange }
               />
-              <Link to="/trybe_tunes/profile">
+              <Link to="/profile">
                 <button
                   data-testid="edit-button-save"
                   onClick={ this.saveNewDataUser }

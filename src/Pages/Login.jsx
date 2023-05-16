@@ -40,7 +40,7 @@ export default class Login extends Component {
     const { name } = this.state;
     this.setState({ login: true });
     await createUser({ name: `${name}` });
-    history.push('/trybe_tunes/search');
+    history.push('/search');
   };
 
   render() {

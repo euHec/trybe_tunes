@@ -13,12 +13,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/trybe_tunes/" component={ Login } />
-          <Route exact path="/trybe_tunes/search" component={ Search } />
-          <Route exact path="/trybe_tunes/album/:id" component={ Album } />
-          <Route exact path="/trybe_tunes/favorites" component={ Favorites } />
-          <Route exact path="/trybe_tunes/profile" component={ Profile } />
-          <Route exact path="/trybe_tunes/profile/edit" component={ ProfileEdit } />
+          <Route exact path="/" component={ Login } />
+          <Route exact path="/search" component={ Search } />
+          <Route exact path="/album/:id" component={ Album } />
+          <Route exact path="/favorites" component={ Favorites } />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route path="" component={ NotFound } />
         </Switch>
       </BrowserRouter>

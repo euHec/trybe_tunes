@@ -54,7 +54,7 @@ export default class Profile extends Component {
                 </div>
               </div>
               <div className="div-button">
-                <Link to="/trybe_tunes/profile/edit">
+                <Link to="/profile/edit">
                   <button className="button-edit">Editar perfil</button>
                 </Link>
               </div>
