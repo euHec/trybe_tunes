@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/euHec/trybe_tunes/static/css/main.0ee47019.css",
-    "main.js": "/euHec/trybe_tunes/static/js/main.f3614c6e.js",
-    "static/media/Playlist-pana.svg": "/euHec/trybe_tunes/static/media/Playlist-pana.94c7a865fa46b769fb02e780a37e75db.svg",
-    "static/media/Headphone-pana.svg": "/euHec/trybe_tunes/static/media/Headphone-pana.865427d2eeffce5785da087be6f123a1.svg",
-    "static/media/pageNotFound.svg": "/euHec/trybe_tunes/static/media/pageNotFound.fba5aa90823bd94e1a8f.svg",
-    "static/media/logo.svg": "/euHec/trybe_tunes/static/media/logo.5e7005ac2adfd89c8c7e3c782da5fa34.svg",
-    "index.html": "/euHec/trybe_tunes/index.html",
-    "main.0ee47019.css.map": "/euHec/trybe_tunes/static/css/main.0ee47019.css.map",
-    "main.f3614c6e.js.map": "/euHec/trybe_tunes/static/js/main.f3614c6e.js.map"
+    "main.css": "/static/css/main.81a8401c.css",
+    "main.js": "/static/js/main.8f0ce8c8.js",
+    "static/media/Playlist-pana.svg": "/static/media/Playlist-pana.94c7a865fa46b769fb02e780a37e75db.svg",
+    "static/media/Headphone-pana.svg": "/static/media/Headphone-pana.865427d2eeffce5785da087be6f123a1.svg",
+    "static/media/pageNotFound.svg": "/static/media/pageNotFound.fba5aa90823bd94e1a8f.svg",
+    "static/media/logo.svg": "/static/media/logo.5e7005ac2adfd89c8c7e3c782da5fa34.svg",
+    "index.html": "/index.html",
+    "main.81a8401c.css.map": "/static/css/main.81a8401c.css.map",
+    "main.8f0ce8c8.js.map": "/static/js/main.8f0ce8c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ee47019.css",
-    "static/js/main.f3614c6e.js"
+    "static/css/main.81a8401c.css",
+    "static/js/main.8f0ce8c8.js"
   ]
 }
